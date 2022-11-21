@@ -6,7 +6,8 @@
   "scripts": {
     "start": "start-server -s ./frontend/build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd frontend && npm ci"
+    "postinstall": "npm ci --prefix frontend",
+    "build": "npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,11 @@
   },
   "homepage": "https://github.com/vasilysmolin/frontend-project-12#readme",
   "dependencies": {
-    "@hexlet/chat-server": "^1.1.6"
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/sensible": "^4.1.0",
+    "@fastify/static": "^6.5.0",
+    "fastify": "^4.0.0",
+    "fastify-cli": "^4.4.0",
+    "fastify-plugin": "^3.0.0"
   }
 }
